@@ -111,13 +111,16 @@ def main():
     """
     Parsing the script options.
     """
-    parser = argparse.ArgumentParser(description="Scripts for managing the database")
+    parser = argparse.ArgumentParser(description="Scripts for managing the application")
     subparsers = parser.add_subparsers()
 
     purge_parser = subparsers.add_parser("purge", help="Remove all data from the database")
     purge_parser.set_defaults(func=purge)
 
-    reload_parser = subparsers.add_parser("reload", help="Remove all data and upload selected file to the database")
+    reload_parser = subparsers.add_parser(
+        "reload",
+        help="Remove all data and upload selected file to the database",
+    )
     reload_parser.add_argument("file", type=argparse.FileType())
     reload_parser.set_defaults(func=reload)
 
