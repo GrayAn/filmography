@@ -16,5 +16,7 @@ TODO
 
 What could be added:
 
+* validation of actor names before inserting to the database;
 * unit tests for resources, services and API util functions;
+* Swagger integration;
 * dependency inversion/injection to make current implementation more looking like Clear architecture.
